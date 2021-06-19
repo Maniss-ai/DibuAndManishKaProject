@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Welcome</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  <meta charset="UTF-8" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    :root {
+      --text-color: #00aa00;
+    }
+
+    body {
+      font-family: 'Roboto Mono', sans-serif;
+      background-color: #333;
+      color: #ccc;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    h1 {
+      color: var(--text-color);
+      font-size: 50px;
+      letter-spacing: -5px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: var(--text-color);
+    }
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    a {
+      color: var(--text-color);
+      text-decoration: none;
+    }
+
+    p {
+      margin: 20px 0;
+    }
+
+    nav {
+      width: 30%;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    nav ul li {
+      color: var(--text-color);
+      cursor: pointer;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .wb-body {
+      background: #111;
+      padding: 20px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .cursor {
+      font-weight: 700;
+      animation: 1s blink step-end infinite;
+    }
+
+    @keyframes blink {
+
+      from,
+      to {
+        color: transparent;
+      }
+
+      50% {
+        color: var(--text-color);
+      }
+    }
+
+
+
+
+
+
+    * {
+      transition: 0.5s ease all;
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* .background {
+			position: fixed;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			background-image: linear-gradient(rgba(13, 55, 149, 0.8), rgba(245, 236, 236, 0.8)), url(at-the-edge-sea-to-sky_t20_g8mLKY.jpg);
+			background-size: cover;
+
+		} */
+
+    .main {
+      margin: 230px auto;
+      width: 90%;
+      max-width: 600px;
+    }
+
+    .search {
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      background-color: white;
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+      animation: hide 500ms ease;
+      margin: 0px auto;
+    }
+
+    .search input {
+      display: none;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      left: 0px;
+      width: 80%;
+      border: 0;
+      outline: 0;
+      border-radius: 5px;
+      padding: 17px 20px;
+    }
+
+    .search:hover {
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .search.active {
+      width: 100%;
+      text-align: left;
+      padding: 0 10px;
+      animation: show 500ms ease;
+      transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1);
+    }
+
+    .search.active input {
+      display: block;
+    }
+
+    .search.active .fa-search {
+      display: none !important;
+    }
+
+    .search.active .fa-close {
+      float: right;
+      display: block !important;
+    }
+
+    .search .icon {
+      font-size: 1.5em;
+    }
+
+    .search .fa-search {
+      display: block;
+      line-height: 40px;
+    }
+
+    .search .fa-close {
+      display: none;
+      font-size: 1.6em;
+      padding: 0px 10px;
+      line-height: 40px;
+    }
+
+    @keyframes hide {
+      0% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1);
+      }
+
+      20% {
+        transform: rotate(-20deg) matrix3d(0.8, 0, 0, 0, 0, 0.8, 0, 0, 0, 0, 1, 0, 0, -20, 1, 1);
+      }
+
+      100% {
+        transform: rotate(0deg) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1);
+      }
+    }
+
+    @keyframes show {
+      0% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1);
+      }
+
+      10% {
+        transform: rotate(17deg) matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1, 0, 0, 10, 1, 1);
+      }
+
+      80% {
+        transform: rotate(-19deg) matrix3d(1, 0.1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1);
+      }
+
+      100% {
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <div class="container">
+    <nav>
+      <ul>
+        <li id="about">/about</li>
+        <li id="contact">/contact</li>
+      </ul>
+    </nav>
+  </div> -->
+
+  <!-- <script>
+    const txtBox = document.querySelector('#textBox')
+    const aboutContent = document.querySelector('#about-content')
+
+    // Main Function
+    function commandProcessor(e) {
+
+      //Check if the enter key is pressed
+      if (e.keyCode == 13) {
+
+        // txtBox.addEventListener(() => {
+        const txtBoxCMD = new WinBox({
+          title: 'About Me',
+          // modal: true,
+          width: '400px',
+          height: '400px',
+          top: 50,
+          right: 50,
+          bottom: 50,
+          left: 50,
+          mount: aboutContent,
+          onfocus: function () {
+            this.setBackground('#00aa00')
+          },
+          onblur: function () {
+            this.setBackground('#777')
+          },
+
+        })
+        // })
+
+
+        // document.getElementById('injected').innerHTML = "";
+        // var i = document.getElementById("txtBox").value
+        // var xhr = new XMLHttpRequest();
+        // xhr.open("GET", "http://192.168.43.174/cgi-bin/pythonfiles/main.py?x=" + i, false)
+        // xhr.send();
+        // var output = xhr.responseText;
+        // document.getElementById("injected").innerHTML = output;
+
+        // //Clear input text box
+        // document.getElementById('txtBox').value = "";
+
+
+      }
+    }
+
+
+
+
+    about.addEventListener('click', () => {
+      const aboutBox = new WinBox({
+        title: 'About Me',
+        // modal: true,
+        width: '400px',
+        height: '400px',
+        top: 50,
+        right: 50,
+        bottom: 50,
+        left: 50,
+        mount: aboutContent,
+        onfocus: function () {
+          this.setBackground('#00aa00')
+        },
+        onblur: function () {
+          this.setBackground('#777')
+        },
+      })
+    })
+
+
+  </script> -->
+
+  <div class="main">
+    <div class="search">
+      <!-- <input type="text" placeholder="Search Your Keywords" /> -->
+      <input type="text" value="root@ARTH:~$" id="prompt" size="28" readonly="readonly" />
+      <input type="text" id="txtBox" onkeypress="commandProcessor(event)" placeholder="Enter your command" size="40"
+        autofocus />
+
+      <i class="fa fa-search"></i>
+      <i class="fa fa-close"></i>
+    </div>
+    <div class="results"></div>
+  </div>
+  <!-- </div> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <!-- <script>
+    $(".fa-search").click(function () {
+      if (!$(".search").hasClass("active")) {
+        $(".search").addClass("active");
+      }
+    });
+
+    $(".fa-close").click(function () {
+      $(".search").removeClass("active");
+    });
+  </script> -->
+
+  <div class="hidden">
+    <div id="about-content">
+      <h2>contact-me:$<span class="cursor">|</span></h2>
+      <p>You can contact me at the email and phone number below</p>
+      <ul>
+        <li>Phone: 555-555-5555</li>
+        <li>Email: brad@email.com</li>
+      </ul>
+    </div>
+
+    <!-- <div id="contact-content">
+      <h2>contact-me:$<span class="cursor">|</span></h2>
+      <p>You can contact me at the email and phone number below</p>
+      <ul>
+        <li>Phone: 555-555-5555</li>
+        <li>Email: brad@email.com</li>
+      </ul>
+    </div> -->
+
+  </div>
+
+  <script src="js/winbox.bundle.js"></script>
+  <script src="js/main.js"></script>
+
+
+
+
+  <div id="showOutput"></div>
+
+
+
+
+</body>
+
+</html>
